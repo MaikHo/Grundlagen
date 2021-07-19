@@ -19,7 +19,7 @@ fun main(){
 
 }
 
-
+// die Main Klasse -> public stacic main ... als kotlin version
 class Main(){
     companion object{
         @JvmStatic
