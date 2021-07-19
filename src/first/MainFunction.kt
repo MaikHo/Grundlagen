@@ -5,10 +5,10 @@ fun main(){
     // System.out.println("Hallo");  // Java ^^
 
     // Java Klasse benutzen
-    var pj = Person("Hoffmann", "Maik", "Hier","2", "12025","Hüselitz")
+    var pj = Person("Hoffmann", "Maik", "Hier","2", "12025","Berlin")
 
     // Kotlin Klassen benutzen
-    var pk = Personkotlin1("Hoffmann", "Maik", "Hier","2", "12025","Hüselitz")
+    var pk = Personkotlin1("Hoffmann", "Maik", "Hier","2", "12025","Berlin")
     var pk1 = Personkotlin1("Mustermann" , street = "da",)
 
     println(pk.toString())
