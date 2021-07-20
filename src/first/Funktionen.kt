@@ -22,6 +22,8 @@ fun main(){
 
     println(nettoPreis.flexMwst(1.07))
 
+    println(nettoPreis flexMwstVersion2 1.07)
+
 }
 
 // grundlegene Funktion  , die void methode
@@ -66,5 +68,11 @@ fun Double.mwst():Double{
 // erweiterte Funktion für den Datentyp Double
 // Aufruf  ->  1.99.mwst(0.19) (Double.mwst(0.19))
 fun Double.flexMwst(value:Double):Double{
+    return this*value
+}
+
+// erweiterte Funktion für den Datentyp Double
+// Aufruf  ->  1.99 flexMwstVersion2 0.19  (Double flexMwstVersion2 0.19 )
+infix fun Double.flexMwstVersion2(value:Double):Double{
     return this*value
 }
