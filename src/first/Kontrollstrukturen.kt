@@ -16,6 +16,26 @@ fun main(){
         println(" $key hat den Wert $value ")
     }
 
+    // 1 bis einschließlich 10  (Zählschleife)
+    for (i in 1..10){
+        println(i)
+    }
+
+    // 1 bis einschließlich 9  (Zählschleife)
+    for (i in 1 until 10){
+        println(i)
+    }
+
+    // Zählschleife in zweierschritten
+    for (i in 1..10 step 2){
+        println(i)
+    }
+
+    // Zählschleife in zweierschritten , runterzählen
+    for (i in 10 downTo 1 step 2){
+        println(i)
+    }
+
 }
 
 fun pruefungen(){
