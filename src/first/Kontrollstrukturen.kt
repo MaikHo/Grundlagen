@@ -36,6 +36,12 @@ fun main(){
         println(i)
     }
 
+    // Buchstaben einzeln aus dem String anzeigen
+    for (ch in "ein Text"){
+        print(ch)
+        println(ch)
+    }
+
 }
 
 fun pruefungen(){
