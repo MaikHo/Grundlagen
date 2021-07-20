@@ -2,6 +2,8 @@ package first
 
 
 fun main(){
+
+    // Test der Funktionen
     defaultWerte()
     defaultWerte(1)
     // defaultWerte("test")  //geht nicht
