@@ -2,7 +2,17 @@ package first
 
 fun main(){
 
+    val list = listOf("a", "b", "c")    // imutable
+    for(str in list){
+        println(str)
+    }
 
+    val map = mapOf<Int, String>(1 to "a", 2 to "b", 3 to "c")  // die Zahlen sind die Schlüssel, Buchstaben die Werte
+    for ((key, value) in map){
+        println(" $key hat den Wert $value ")
+    }
+
+}
 
 fun pruefungen(){
     var i = 5
@@ -68,5 +78,3 @@ fun pruefungen(){
 }
 
 
-
-}
