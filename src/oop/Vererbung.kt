@@ -38,8 +38,33 @@ open class Child(name:String, age:Int):Parent(name, age){
     }
 }
 
-class SubChild(name:String, age:Int):Child(name,age){
+interface Info{
+    // Zwang mit dem prinln das die Methode in Subchild implementiert werden mus
+    fun info(){
+        println("Info aus dem Interface")
+    }
+    // muss in Subchild auch implementiert werden
+    fun demo()
+
+    // damit kann auch die Subchild gezwungen werden abstrackt zu werden
+    fun demo1()
+}
+
+// Interface benutzen -> ,Info  (Komma Info :-))
+abstract class SubChild(name:String, age:Int):Child(name,age),Info{
+
     // override fun andereFunktion(){}  // kann an dieser Stelle nicht überschrieben werden
+    override fun info() {
+        println("Info aus SubChild")
+        super<Info>.info() // Holen der Methode aus dem Interface
+        super<Child>.info() // Holen der Methode aus Child
+    }
+    /* für abstract ausgeblendet
+    override fun demo() {
+        TODO("Not yet implemented")
+    }
+    */
+
 }
 
 fun main(){
@@ -50,5 +75,17 @@ fun main(){
     println(c.name)
 
     c.notOverreit()
+
+    val sc = object: SubChild("Test", 7){
+        override fun demo() {
+            println("aus einer anonyme Klasse")
+        }
+
+        override fun demo1() {
+            println("aus einer anonyme Klasse")
+        }
+
+    }
+    sc.info()
 
 }
