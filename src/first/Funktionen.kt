@@ -95,13 +95,20 @@ private fun findFixPoint():Double{
         x = Math.cos(x)
     }
 }
-
 // so macht man es in Kotlin
 val eps1 = 1E-10 // "good enough", could be 10^-15
 
 tailrec fun findFixPoint(x:Double):Double = if (Math.abs(x - Math.cos(x)) < eps1) x else findFixPoint(Math.cos(x))
 
 
+// local functions
+fun testLocal(i: Int){
+    var j = 2
+    fun add():Int{
+        return i + j
+    }
+    println(add())
+}
 
 
 
