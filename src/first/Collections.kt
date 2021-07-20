@@ -11,7 +11,7 @@ fun main(){
 
     mutableStringList.addAll(stringList)
 
-    val newList : List<String> = listOf("a", "b", "c")
+    val newList : List<String> = arrayListOf("a", "b", "c")
 
     println(newList)
     println(mutableStringList)
@@ -32,5 +32,13 @@ fun main(){
     println("viertes Element ${mutableStringList[3]}")
     println("erster index von c ${mutableStringList.indexOf("c")}")
     println("letzter index von c ${mutableStringList.lastIndexOf("c")}")
+
+
+    // Arrays
+    val array = arrayOf(1,2,3,4,5)
+    array.forEachIndexed { index, i -> println("$index -> $i") }
+    println(array.contains(3))
+
+
 
 }
