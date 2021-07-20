@@ -9,6 +9,8 @@ fun main(){
     defaultWerte(str = "test")
     defaultWerte(str="hallo", value = 1)
 
+    varargs("string1", "a", "b","c", str2 = "string2")
+
 }
 
 // grundlegene Funktion  , die void methode
@@ -27,5 +29,10 @@ fun mitParameter(value : Int, str : String){
 
 // mit defaultwert, kommt kein value beim Aufruf mit wird der defaultwert genommen
 fun defaultWerte(value: Int = 0, str: String = "leer"){
+
+}
+
+// variable argumente übergeben (String2 kann man machen sollte man aber nicht)
+fun varargs(str1:String,vararg liste:String, str2:String){
 
 }
