@@ -4,12 +4,15 @@ package first
 fun main(){
     defaultWerte()
     defaultWerte(1)
-    // defaultWerte("test")  geht nicht
+    // defaultWerte("test")  //geht nicht
     defaultWerte(1, "test")
     defaultWerte(str = "test")
     defaultWerte(str="hallo", value = 1)
 
     varargs("string1", "a", "b","c", str2 = "string2")
+
+
+    println("Die Summe ist ${sum(2,3)}")
 
 }
 
@@ -36,3 +39,12 @@ fun defaultWerte(value: Int = 0, str: String = "leer"){
 fun varargs(str1:String,vararg liste:String, str2:String){
 
 }
+
+
+// Funktion mit Berechnung und Rückgabe
+// Unten steht das gleiche nur kürzer
+fun sum(i:Int, j:Int):Int{
+    return i+j;
+}
+// Sigelline Funktion
+//fun sum(i:Int, j:Int) = i+j;
