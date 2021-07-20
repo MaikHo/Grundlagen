@@ -24,6 +24,8 @@ fun main(){
 
     println(nettoPreis flexMwstVersion2 1.07)
 
+    output("Hallo")
+
 }
 
 // grundlegene Funktion  , die void methode
@@ -75,4 +77,9 @@ fun Double.flexMwst(value:Double):Double{
 // Aufruf  ->  1.99 flexMwstVersion2 0.19  (Double flexMwstVersion2 0.19 )
 infix fun Double.flexMwstVersion2(value:Double):Double{
     return this*value
+}
+
+// durch inline wird zur Kompilerzeit der Inhalt eingefügt, geht nicht über den Stack
+inline fun output(str: String){
+    println(str)
 }
