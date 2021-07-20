@@ -83,3 +83,26 @@ infix fun Double.flexMwstVersion2(value:Double):Double{
 inline fun output(str: String){
     println(str)
 }
+
+// Globale Variable
+val eps = 1E-10 // "good enough", could be 10^-15
+// recursiver Aufruf von x=Math.cos(x) bis Abbruchbedingung eintritt. Erzeugt durch while(true)
+private fun findFixPoint():Double{
+    var x = 1.0
+    while (true){
+        val y = Math.cos(x)
+        if (Math.abs(x-y) < eps) return x
+        x = Math.cos(x)
+    }
+}
+
+// so macht man es in Kotlin
+val eps1 = 1E-10 // "good enough", could be 10^-15
+
+tailrec fun findFixPoint(x:Double):Double = if (Math.abs(x - Math.cos(x)) < eps1) x else findFixPoint(Math.cos(x))
+
+
+
+
+
+
