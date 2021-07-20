@@ -7,6 +7,10 @@ fun main(){
         println(str)
     }
 
+    for ((index, elem) in list.withIndex()){
+        println("$index -> $elem")
+    }
+
     val map = mapOf<Int, String>(1 to "a", 2 to "b", 3 to "c")  // die Zahlen sind die Schlüssel, Buchstaben die Werte
     for ((key, value) in map){
         println(" $key hat den Wert $value ")
