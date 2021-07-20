@@ -1,6 +1,10 @@
 package first
 
 fun main(){
+
+
+
+fun pruefungen(){
     var i = 5
 
     if (i<10){
@@ -61,9 +65,7 @@ fun main(){
         is String -> println("ist ein String")
         is Int -> println("ist ein INt")
     }
-
-
-
+}
 
 
 
