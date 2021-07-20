@@ -16,6 +16,12 @@ fun main(){
 
     println("Die Summe ist ${sum(2,3)}")
 
+    var nettoPreis = 2.99
+
+    println(nettoPreis.mwst())
+
+    println(nettoPreis.flexMwst(1.07))
+
 }
 
 // grundlegene Funktion  , die void methode
@@ -50,3 +56,15 @@ fun sum(i:Int, j:Int):Int{
 }
 // Sigelline Funktion
 //fun sum(i:Int, j:Int) = i+j;
+
+// erweiterte Funktion für den Datentyp Double
+// Aufruf  ->  1.99.mwst() (Double.mwst)
+fun Double.mwst():Double{
+    return this*1.19
+}
+
+// erweiterte Funktion für den Datentyp Double
+// Aufruf  ->  1.99.mwst(0.19) (Double.mwst(0.19))
+fun Double.flexMwst(value:Double):Double{
+    return this*value
+}
