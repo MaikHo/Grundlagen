@@ -50,7 +50,7 @@ interface Info{
     fun demo1()
 }
 
-// Interface benutzen -> ,Info  (Komma Info :-))
+// Interface benutzen -> ,Info  (Komma Info :-)  nur wenn schon was erweitert wurde oder implementiert ansonsten nur :)
 abstract class SubChild(name:String, age:Int):Child(name,age),Info{
 
     // override fun andereFunktion(){}  // kann an dieser Stelle nicht überschrieben werden
